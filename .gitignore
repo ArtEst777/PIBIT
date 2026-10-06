@@ -1,0 +1,12 @@
+# Arquivos grandes e referências externas em PDF
+*.pdf
+**/*.pdf
+
+# Arquivos temporários do Office / Excel
+~$*
+.~lock.*
+
+# Sistema Operacional
+Thumbs.db
+Desktop.ini
+.DS_Store
