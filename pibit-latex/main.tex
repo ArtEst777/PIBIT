@@ -1,0 +1,70 @@
+% =====================================================================
+%  RELATÓRIO PIBIT — MODELO EM LaTeX
+%  Espelha o formato do relatório PIBIC/UnB (A4, ABNT, Arial 12, 1,5)
+%  e a estrutura das "Instruções para escrita de trabalhos científicos".
+%
+%  Overleaf: Menu > Compilador = pdfLaTeX. Bibliografia = BibTeX (padrão).
+%  Leia o arquivo LEIAME.md antes de começar.
+% =====================================================================
+\documentclass[12pt,a4paper]{article}
+
+\input{preambulo}
+
+% ---------------------------------------------------------------------
+% RASCUNHO: true mostra as orientações em vermelho no PDF.
+% Troque para false quando for entregar (todas as orientações somem).
+% ---------------------------------------------------------------------
+\setboolean{rascunho}{true}
+
+% ---------------------------------------------------------------------
+% DADOS DO TRABALHO
+% ---------------------------------------------------------------------
+\newcommand{\titulo}{MINIATURIZAÇÃO E INTEGRAÇÃO DE SENSORES TÁTEIS MAGNÉTICOS eFLESH EM UMA LUVA COM FEEDBACK VIBROTÁTIL}
+\newcommand{\autor}{Artur Ferreira Gonçalves}
+\newcommand{\orientador}{Prof. Dr. Felix}
+\newcommand{\departamento}{Faculdade de Tecnologia (FT) -- UnB}
+\newcommand{\laboratorio}{Laboratório de Visualização, Interação e Simulação -- L-VIS}
+\newcommand{\programa}{PIBIT -- Programa Institucional de Bolsas de Iniciação em Desenvolvimento Tecnológico e Inovação -- 2026/2027}
+
+\begin{document}
+
+% ------------------------- CABEÇALHO --------------------------------
+\begin{center}
+  \begin{spacing}{1.5}
+    {\fontsize{14}{18}\selectfont\bfseries \titulo\par}
+  \end{spacing}
+  \vspace{0.6cm}
+  \autor\par
+  \vspace{0.3cm}
+  \orientador\par
+  \departamento\par
+  \laboratorio\par
+  \programa\par
+\end{center}
+\vspace{0.5cm}
+
+% ------------------------- ELEMENTOS PRÉ-TEXTUAIS --------------------
+\input{secoes/00-resumo}
+
+% Lista de siglas (Dica 4). Só aparecem as siglas efetivamente usadas.
+\input{siglas}
+
+% ------------------------- ELEMENTOS TEXTUAIS ------------------------
+\input{secoes/01-introducao}
+\input{secoes/02-estado-da-arte}
+\input{secoes/03-referencial-teorico}
+\input{secoes/04-metodo}
+\input{secoes/05-resultados}
+\input{secoes/06-consideracoes-finais}
+
+% ------------------------- ELEMENTOS PÓS-TEXTUAIS --------------------
+\input{secoes/07-agradecimentos}
+
+\secaosemnumero{REFERÊNCIAS}
+\begin{spacing}{1.0}
+  \bibliography{referencias}
+\end{spacing}
+
+\input{secoes/08-apendices}
+
+\end{document}

@@ -1,0 +1,69 @@
+% =====================================================================
+%  4 MÉTODO DE PESQUISA — "Como resolvi o problema?"
+%  Dois tópicos (Item 3): (1) classificação da pesquisa;
+%  (2) estruturação, SEMPRE representada por uma Figura (Dica 5).
+%  As etapas daqui viram as subseções dos Resultados (Dica 6).
+% =====================================================================
+\section{Método de Pesquisa}\label{sec:metodo}
+
+\escrever{parágrafo de ligação com o Referencial Teórico.}
+
+\subsection{Classificação da pesquisa}
+
+\escrever{natureza (aplicada), abordagem (quantitativa), objetivos (exploratória e experimental) e procedimentos (pesquisa experimental em laboratório). Descrever amostras: número de sensores fabricados, número de ensaios, número de voluntários (se houver), instrumentos de medição e técnicas de análise.}
+
+\dica{Se houver testes com voluntários, citar a aprovação do \ac{CEP} (Resolução CNS 466/2012) e colocar o termo de consentimento no Apêndice.}
+
+\subsection{Estruturação da pesquisa}
+
+A pesquisa foi estruturada em sete etapas, conforme a Figura~\ref{fig:estrutura}.
+\escrever{ajustar o texto e a figura às etapas reais.}
+
+\begin{figure}[H]
+  \centering
+  \begin{spacing}{1.0}
+  \begin{tikzpicture}[
+      node distance=4mm and 6mm,
+      etapa/.style={draw, rounded corners=2pt, align=center, font=\footnotesize,
+                    minimum width=3.6cm, minimum height=1.25cm, fill=gray!6},
+      seta/.style={-{Stealth[length=2mm]}, thick}]
+    \node[etapa] (e1) {\textbf{Etapa 1}\\Levantamento do\\estado da arte (TEMAC)};
+    \node[etapa, right=of e1] (e2) {\textbf{Etapa 2}\\Projeto CAD e\\fabricação em TPU};
+    \node[etapa, right=of e2] (e3) {\textbf{Etapa 3}\\Instrumentação\\e firmware};
+    \node[etapa, below=of e3] (e4) {\textbf{Etapa 4}\\Caracterização\\em bancada};
+    \node[etapa, left=of e4] (e5) {\textbf{Etapa 5}\\Calibração\\(regressão $\times$ MLP)};
+    \node[etapa, left=of e5] (e6) {\textbf{Etapa 6}\\Integração na luva e\\feedback vibrotátil};
+    \node[etapa, below=of e6] (e7) {\textbf{Etapa 7}\\Validação com\\objetos reais};
+    \draw[seta] (e1) -- (e2);
+    \draw[seta] (e2) -- (e3);
+    \draw[seta] (e3) -- (e4);
+    \draw[seta] (e4) -- (e5);
+    \draw[seta] (e5) -- (e6);
+    \draw[seta] (e6) -- (e7);
+  \end{tikzpicture}
+  \end{spacing}
+  \caption{Estruturação da pesquisa}
+  \label{fig:estrutura}
+  \fonte{Elaborado pelo autor (2026).}
+\end{figure}
+
+\subsubsection{Etapa 1 -- Levantamento do estado da arte}
+\escrever{como a revisão TEMAC foi conduzida (detalhes na Seção~\ref{sec:estado-arte}).}
+
+\subsubsection{Etapa 2 -- Projeto CAD e fabricação}
+\escrever{dimensões (15$\times$15$\times$10~mm), tamanho de célula, espessura das paredes, critério de imprimibilidade (bico de 0,4~mm), filamento \ac{TPU} 95A, ímãs N52, pausa de impressão para inserção dos ímãs.}
+
+\subsubsection{Etapa 3 -- Instrumentação e firmware}
+\escrever{TLV493D na lateral da falange distal, multiplexador TCA9548A, \ac{ESP32}, taxa de amostragem, linha de base ($\Delta B$), arquitetura modular do firmware.}
+
+\subsubsection{Etapa 4 -- Caracterização em bancada}
+\escrever{instrumento de referência (célula de carga), faixas de força normal (0--15~N) e cisalhante (0--8~N), malha de localização 10$\times$10~mm, número de repetições, controle de temperatura.}
+
+\subsubsection{Etapa 5 -- Calibração}
+\escrever{modelos comparados, divisão dos dados por ensaio (validação temporal), métricas, exportação do modelo para o microcontrolador.}
+
+\subsubsection{Etapa 6 -- Integração e feedback vibrotátil}
+\escrever{posição dos motores \ac{ERM} (dorso ou palma), driver MOSFET, mapeamento força $\rightarrow$ \ac{PWM}, teste de interferência magnética em função da distância, medição de latência.}
+
+\subsubsection{Etapa 7 -- Validação}
+\escrever{tarefas (aperto controlado, detecção de deslizamento e pinça fina), condição de comparação, métricas e critério de sucesso.}

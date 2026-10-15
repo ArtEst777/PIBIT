@@ -1,0 +1,53 @@
+% =====================================================================
+%  2 LEVANTAMENTO DO ESTADO DA ARTE — "O que já foi falado sobre isso?"
+%  Instruções (Item 1 e Dica 9): revisão sistemática pelo TEMAC
+%  (www.pesquisatemac.com), em bases indexadas, com:
+%   - palavras-chave e bases usadas;
+%   - análises de co-citação (co-citation) e acoplamento (coupling);
+%   - quadro-resumo com as pesquisas e autores principais;
+%   - modelo integrador e análise crítica (mostrar o GAP).
+%  Referências atualizadas: preferir os últimos 4 anos.
+%  Alternativa aceita: protocolo PRISMA (como no artigo de RA veicular).
+%  Se faltar espaço (formato de artigo), substitua por "Trabalhos
+%  relacionados" ao fim do Referencial Teórico.
+% =====================================================================
+\section{Levantamento do Estado da Arte}\label{sec:estado-arte}
+
+\escrever{parágrafo de ligação com a Introdução (Dica 2).}
+
+\subsection{Protocolo da revisão}
+
+\escrever{bases consultadas (Web of Science, Scopus, IEEE Xplore), período, string de busca, número de registros em cada etapa do TEMAC.}
+
+\dica{A string pode partir das buscas já feitas, por exemplo: ("magnetic tactile sensor" OR "Hall effect tactile") AND ("3D print*" OR "microstructure" OR "glove"). Registre o número de resultados de cada base.}
+
+\subsection{Análises de co-citação e acoplamento}
+
+\escrever{resultados do TEMAC: principais periódicos, autores, países e as frentes de pesquisa identificadas pelo acoplamento bibliográfico. Inserir as figuras geradas (VOSviewer) com Figura e Fonte.}
+
+\subsection{Quadro-resumo}
+
+O Quadro~\ref{qua:estado-arte} reúne as pesquisas de maior aderência ao tema.
+\escrever{completar e revisar o quadro com os trabalhos selecionados.}
+
+\begin{quadro}[H]
+  \caption{Principais pesquisas sobre sensores táteis magnéticos}
+  \label{qua:estado-arte}
+  \begin{spacing}{1.0}\footnotesize
+  \begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}p{2.9cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+    \hline
+    \textbf{Referência} & \textbf{Abordagem} & \textbf{Principal resultado} \\ \hline
+    \citeonline{bhirangi2021reskin} & Pele elastomérica com partículas magnéticas sobre 5 magnetômetros & Pele substituível; auto-supervisão reduz a perda de desempenho entre peças \\ \hline
+    \citeonline{bhirangi2024anyskin} & Pele autoaderente e alinhada & Menor variação entre unidades e troca da pele em segundos \\ \hline
+    \citeonline{kristanto2018wearable} & Sensores Hall nas laterais da ponta do dedo humano & Força 3D sem cobrir a polpa; compensação do campo terrestre \\ \hline
+    \citeonline{pattabiraman2025eflesh} & Microestrutura cut-cell impressa em TPU com ímãs embutidos & RMSE de 0,27~N (normal) e 0,12~N (cisalhante) \\ \hline
+    \citeonline{barthel2026eflesh} & Regressão polinomial aplicada ao eFlesh & RMSE de 0,09~N sem rede neural \\ \hline
+    \escrever{...} & & \\ \hline
+  \end{tabularx}
+  \fonte{Elaborado pelo autor (2026).}
+  \end{spacing}
+\end{quadro}
+
+\subsection{Modelo integrador e análise crítica}
+
+\escrever{figura que integra os achados (por exemplo: transdução $\times$ fabricação $\times$ calibração $\times$ aplicação) e análise crítica mostrando a lacuna: ausência de versão em escala de dedo humano, uso de um único magnetômetro, interferência do atuador vibrotátil não caracterizada e falta de protocolos padronizados de avaliação.}

@@ -22,5 +22,18 @@ build/
 .pio/
 .vscode/
 
+# LaTeX temporários de compilação
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+
 # Alias local do Windows (Junction)
 scr/
+

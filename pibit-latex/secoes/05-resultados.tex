@@ -1,0 +1,58 @@
+% =====================================================================
+%  5 RESULTADOS E DISCUSSÃO — "O que descobri? O que isso significa?"
+%  É a essência do trabalho e o principal critério de avaliação.
+%  As subseções seguem EXATAMENTE as etapas do Método (Dica 6).
+%  Para cada etapa: o que foi obtido (tabular os dados) + análise crítica.
+%  Resultados negativos e soluções de contorno também são resultados
+%  (veja como o relatório do INCRA trata a limitação do Autodesk Tandem).
+% =====================================================================
+\section{Resultados e Discussão}\label{sec:resultados}
+
+\escrever{parágrafo de abertura: o que esta seção apresenta e como está organizada.}
+
+\subsection{Estado da arte}
+\escrever{síntese dos achados da Etapa 1 que orientaram as decisões de projeto.}
+
+\subsection{Fabricação dos sensores}
+\escrever{fotos dos protótipos (Figura), parâmetros finais, falhas de impressão e ajustes.}
+
+\subsection{Instrumentação e firmware}
+\escrever{leitura do sensor, ruído medido, estabilidade da linha de base.}
+
+\subsection{Caracterização em bancada}
+\escrever{curvas força $\times$ $\Delta B$ (Gráfico), histerese, repetibilidade.}
+
+\subsection{Calibração}
+
+A Tabela~\ref{tab:modelos} compara os modelos de calibração.
+\escrever{substituir pelos resultados com o sensor fabricado.}
+
+\begin{table}[H]
+  \centering
+  \caption{Erro de estimativa de força por modelo de calibração}
+  \label{tab:modelos}
+  \begin{spacing}{1.0}\small
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Modelo} & \textbf{RMSE (N)} & \textbf{R$^2$} & \textbf{Parâmetros} \\
+    \midrule
+    Regressão linear              & -- & -- & 4 \\
+    Regressão polinomial (grau 2) & -- & -- & 10 \\
+    MLP 2$\times$16               & -- & -- & 353 \\
+    MLP 2$\times$128              & -- & -- & 17.153 \\
+    \bottomrule
+  \end{tabular}
+  \fonte{Elaborado pelo autor (2026).}
+  \end{spacing}
+\end{table}
+
+\escrever{discussão: qual modelo foi escolhido para o ESP32 e por quê, comparando com \citeonline{pattabiraman2025eflesh} e \citeonline{barthel2026eflesh}.}
+
+\subsection{Integração e feedback vibrotátil}
+\escrever{interferência do ERM em função da distância (Gráfico), latência da malha, consumo.}
+
+\subsection{Validação}
+\escrever{desempenho nas tarefas com objetos reais.}
+
+\subsection{Discussão}
+\escrever{o que os resultados significam diante da literatura; limitações encontradas e por quê.}

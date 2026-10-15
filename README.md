@@ -120,6 +120,13 @@ A lista de materiais foi detalhada em 4 cenários com fórmulas automáticas por
 │   └── Sensor_Magnetometro/                                # Testes do magnetômetro 3D TLV493D
 │       ├── test_tlv493d_i2c.ino                            # Firmware de streaming triaxial e baseline ΔB
 │       └── README.md                                       # Pinagem I2C e visualização no Serial Plotter
+├── pibit-latex/                                            # Modelo oficial do relatório final em LaTeX (padrão ABNT / UnB)
+│   ├── main.tex                                            # Arquivo mestre do relatório (configurações e cabeçalho)
+│   ├── preambulo.tex                                       # Pacotes, formatação ABNT, Arial 12 e regras tipográficas
+│   ├── referencias.bib                                     # Base de dados bibliográfica BibTeX com fontes verificadas
+│   ├── siglas.tex                                          # Lista dinâmica de abreviaturas e siglas (pacote acro)
+│   ├── secoes/                                             # Capítulos do relatório (00-resumo a 08-apêndices)
+│   └── LEIAME.md                                           # Guia de compilação no Overleaf e orientações de escrita
 ├── Domunetos e Artigos/                                    # Teses e artigos de apoio (PDFs pesados ignorados no Git)
 ├── .gitignore                                              # Proteção contra binários pesados e temporários
 ├── LICENSE                                                 # Licença MIT

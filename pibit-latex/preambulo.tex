@@ -1,0 +1,96 @@
+% =====================================================================
+%  PREÂMBULO — formatação. Em geral não é preciso mexer aqui.
+% =====================================================================
+
+% ---------- Idioma e codificação ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\IfFileExists{brazilian.ldf}{\usepackage[english,brazilian]{babel}}{\usepackage[english]{babel}}
+
+% ---------- Fonte Arial (equivalente livre: Helvetica) ----------
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{microtype}
+
+% ---------- Página: A4, margens 3 cm (sup./esq.) e 2 cm (inf./dir.) ----------
+\usepackage[a4paper,top=3cm,left=3cm,bottom=2cm,right=2cm]{geometry}
+
+% ---------- Espaçamento 1,5 e recuo de 1,25 cm ----------
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\usepackage{indentfirst}
+
+% ---------- Pacotes gerais ----------
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}, group-separator={.}, per-mode=symbol}
+\usepackage{graphicx}
+\graphicspath{{figuras/}}
+\usepackage{booktabs,tabularx,array,multirow}
+\usepackage{float}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric,fit}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=1.25cm}
+\usepackage{ifthen}
+\newboolean{rascunho}
+
+% ---------- Títulos: "1 INTRODUÇÃO" (12 pt, negrito, maiúsculas) ----------
+\usepackage{titlesec}
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{0.5em}{\MakeUppercase}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\itshape}{\thesubsubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+\titlespacing*{\subsubsection}{0pt}{6pt}{6pt}
+% Seções sem número (RESUMO, ABSTRACT, REFERÊNCIAS...)
+\newcommand{\secaosemnumero}[1]{%
+  \section*{#1}\addcontentsline{toc}{section}{#1}}
+
+% ---------- Legendas: "Figura 1 — Título" (10 pt, centralizada) ----------
+\usepackage{caption}
+\captionsetup{font=small,labelsep=endash,justification=centering,singlelinecheck=false,skip=6pt}
+\captionsetup[table]{position=top}
+\DeclareCaptionLabelSeparator{travessao}{\ --\ }
+\captionsetup{labelsep=travessao}
+% Fonte abaixo da figura/tabela: \fonte{Autor (2026).}
+\newcommand{\fonte}[1]{\par\vspace{4pt}{\centering\small\linespread{1}\selectfont Fonte: #1\par}}
+
+% Novos ambientes flutuantes usados nos modelos: Quadro e Gráfico
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[fileext=loq,listname={Lista de Quadros},name=Quadro,placement=htbp]{quadro}
+\DeclareFloatingEnvironment[fileext=log2,listname={Lista de Gráficos},name=Gráfico,placement=htbp]{grafico}
+\captionsetup[quadro]{position=top}
+
+% Nomes em português independentemente do idioma carregado
+\AtBeginDocument{%
+  \renewcommand{\figurename}{Figura}%
+  \renewcommand{\tablename}{Tabela}%
+  \renewcommand{\abstractname}{Resumo}%
+}
+
+% ---------- Siglas (Dica 4: por extenso na 1.ª vez, depois só a sigla) ----------
+\usepackage[printonlyused,nohyperlinks]{acronym}
+
+% ---------- Links (precisa vir ANTES do abntex2cite) ----------
+\usepackage[hidelinks]{hyperref}
+
+% ---------- Citações ABNT: \citeonline{chave} -> Autor (2025); \cite{chave} -> (AUTOR, 2025) ----------
+\IfFileExists{abntex2cite.sty}{%
+  \usepackage[alf,abnt-emphasize=bf,abnt-etal-cite=2,abnt-etal-list=0,abnt-and-type=e]{abntex2cite}%
+  \citebrackets()%
+}{%
+  \usepackage[round,authoryear]{natbib}
+  \newcommand{\citeonline}{\citet}
+  \bibliographystyle{plainnat}
+}
+
+% ---------- Orientações de escrita (somem quando rascunho = false) ----------
+\newcommand{\escrever}[1]{%
+  \ifthenelse{\boolean{rascunho}}{{\color{BrickRed}\itshape [Escrever: #1]}}{}}
+\newcommand{\dica}[1]{%
+  \ifthenelse{\boolean{rascunho}}{%
+    \par\noindent\fcolorbox{BrickRed}{red!4}{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{\small\color{BrickRed}\textbf{Orientação:} #1}}\par}{}}

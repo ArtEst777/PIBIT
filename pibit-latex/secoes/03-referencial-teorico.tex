@@ -1,0 +1,30 @@
+% =====================================================================
+%  3 REFERENCIAL TEÓRICO — "Quais conceitos subsidiam o trabalho?"
+%  Cada subseção deve terminar ligando-se à seguinte (Dica 2), e todas
+%  devem ter relação direta com os resultados.
+%  Tabelas/figuras sempre citadas pelo número: "conforme a Tabela 1".
+% =====================================================================
+\section{Referencial Teórico}\label{sec:referencial}
+
+\escrever{parágrafo de abertura explicando a sequência dos conceitos.}
+
+\subsection{Sensoriamento tátil}
+\escrever{tecnologias de transdução (resistiva, capacitiva, piezoelétrica, óptica e magnética) e por que a magnética é adequada à ponta do dedo \cite{dahiya2010tactile}.}
+
+\subsection{Efeito Hall e magnetômetros tridimensionais}
+\escrever{princípio do efeito Hall; campo de um ímã permanente e decaimento com a distância; características do TLV493D \cite{infineon2016tlv493d}: faixa, resolução, endereçamento \ac{I2C}.}
+
+\begin{equation}
+  B_z(z) = \frac{B_r}{2}\left[\frac{z+L}{\sqrt{R^2+(z+L)^2}} - \frac{z}{\sqrt{R^2+z^2}}\right]
+  \label{eq:campo-disco}
+\end{equation}
+\escrever{explicar cada símbolo da Equação~\eqref{eq:campo-disco} (campo axial de um ímã em disco).}
+
+\subsection{Microestruturas e manufatura aditiva em TPU}
+\escrever{microestruturas cut-cell \cite{tozoni2024cutcell}, rigidez controlada pela geometria \cite{panetta2015elastic}, comportamento do \ac{TPU} impresso sob compressão \cite{bates2016honeycombs}.}
+
+\subsection{Calibração por aprendizado de máquina}
+\escrever{regressão linear e polinomial; \ac{MLP}; métricas (\ac{RMSE}, R$^2$); validação temporal e vazamento de dados \cite{bergmeir2012crossvalidation}; inferência embarcada \cite{david2021tflm}.}
+
+\subsection{Feedback vibrotátil}
+\escrever{mecanorreceptores e percepção de vibração; atuadores \ac{ERM} e \ac{LRA} \cite{culbertson2018haptics}; acionamento por \ac{PWM}.}
