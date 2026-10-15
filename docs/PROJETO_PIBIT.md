@@ -3,6 +3,7 @@
 > **Título provisório**: o nome definitivo do projeto ainda será escolhido.
 
 - **Autor**: Artur Ferreira Gonçalves (graduando em Engenharia Mecatrônica, UnB)
+- **Orientador**: Prof. Dr. Felix (Universidade de Brasília — UnB)
 - **Laboratório**: L-VIS — Laboratório de Visualização, Interação e Simulação (UnB)
 - **Período**: 12 meses
 - **Data**: Outubro/2026
@@ -130,19 +131,32 @@ Essa limitação não inviabiliza o projeto; apenas reorganiza a sequência de e
 - Mais de 900 horas em atividades de extensão.
 - Apresentação oral: "Luva de Realidade Virtual de Baixo Custo" (LVIS, 2025).
 
-## 11. Referências
+## 11. Referências e Documentação Interna
 
-BHIRANGI, R.; DEFRANCO, A.; ADKINS, J.; et al. AnySkin: Versatile and replaceable tactile skin. Conference on Robot Learning (CoRL), 2024.
+### 11.1 Repositório Oficial e Código Aberto
+PATTABIRAMAN, V.; HUANG, Z.; PANOZZO, D.; ZORIN, D.; PINTO, L.; BHIRANGI, R. **notvenky/eFlesh: Highly customizable Magnetic Touch Sensing using Cut-Cell Microstructures**. Repositório GitHub, 2025. Disponível em: <https://github.com/notvenky/eFlesh>.
 
-PATTABIRAMAN, V.; HUANG, Z.; PANOZZO, D.; ZORIN, D.; PINTO, L.; BHIRANGI, R. eFlesh: Highly customizable Magnetic Touch Sensing using Cut-Cell Microstructures. arXiv preprint arXiv:2506.09994, 2025.
+### 11.2 Documentos Internos da Pesquisa (Pasta `docs/`)
+- **Catálogo de Fontes (99 itens)**: GONÇALVES, Artur F.; OLIVEIRA, Igor R. C. `Catalogo_Fontes_PIBIT.xlsx` (base indexada com 65 artigos, 13 datasheets, 11 códigos abertos e 8 sites técnicos).
+- **Síntese da Literatura**: OLIVEIRA, Igor Rafael de Carvalho. `Revisão Bibliográfica — eFlesh miniaturizado para luva de RV.pdf` (estudo de 13 páginas detalhando o funil temático, a linhagem ReSkin ➔ AnySkin ➔ eFlesh e a discussão MLP vs. regressão).
+- **Plano de Aprendizado**: OLIVEIRA, Igor Rafael de Carvalho. `Roteiro de estudo MLP para o PIBIT.pdf` (planejamento em 4 semanas para domínio de regressão polinomial e redes MLP para o ESP32).
 
-TOZONI, D.; HUANG, Z.; PANOZZO, D.; ZORIN, D. Cut-cell microstructures for two-scale structural optimization. Computer Graphics Forum, v. 43, n. 5, 2024.
+### 11.3 Artigos e Teses Fundamentais
+BARTHEL, Felix. *Entwicklung eines regressionsbasierten Modells zur Echtzeit-Kraftschätzung für den eFlesh-Taktilsensor*. HTWK Leipzig, 2026.
 
-YIN, J.; et al. Learning in-hand translation using tactile skin with shear and normal force sensing. IEEE Robotics and Automation Letters, 2024.
+BHIRANGI, R.; DEFRANCO, A.; ADKINS, J.; et al. *AnySkin: Versatile and replaceable tactile skin*. Conference on Robot Learning (CoRL), 2024.
 
-INFINEON. TLV493D-A1B6 3D Magnetic Sensor Datasheet. Rev. 1.1, 2019.
+CHELLY, S. et al. *Tactile-based force estimation for interaction control with robot fingers*. IEEE Robotics and Automation Letters, 2025.
 
-ESPRESSIF. ESP32 Datasheet. Version 2.1, 2018.
+PATTABIRAMAN, V.; HUANG, Z.; PANOZZO, D.; ZORIN, D.; PINTO, L.; BHIRANGI, R. *eFlesh: Highly customizable Magnetic Touch Sensing using Cut-Cell Microstructures*. arXiv preprint arXiv:2506.09994, 2025.
+
+TOZONI, D.; HUANG, Z.; PANOZZO, D.; ZORIN, D. *Cut-cell microstructures for two-scale structural optimization*. Computer Graphics Forum, v. 43, n. 5, 2024.
+
+YIN, J.; et al. *Learning in-hand translation using tactile skin with shear and normal force sensing*. IEEE Robotics and Automation Letters, 2024.
+
+INFINEON. *TLV493D-A1B6 3D Magnetic Sensor Datasheet*. Rev. 1.1, 2019.
+
+ESPRESSIF. *ESP32 Datasheet*. Version 2.1, 2018.
 
 ## 12. Observação final
 
