@@ -113,6 +113,13 @@ A lista de materiais foi detalhada em 4 cenários com fórmulas automáticas por
 │   ├── Catalogo_Fontes_PIBIT.xlsx                          # Catálogo com 99 fontes bibliográficas categorizadas
 │   ├── Revisão Bibliográfica — eFlesh miniaturizado...pdf   # Síntese bibliográfica e funil temático (13 páginas)
 │   └── Roteiro de estudo MLP para o PIBIT.pdf              # Roteiro de capacitação em 4 semanas (MLP e regressão)
+├── src/                                                    # Código-fonte e testes de bancada (disponível também como scr/)
+│   ├── Sensor_ERM/                                         # Testes do atuador vibrotátil ERM via PWM
+│   │   ├── test_erm_pwm.ino                                # Firmware de teste (rampas e padrões hápticos)
+│   │   └── README.md                                       # Circuito do driver MOSFET e precauções
+│   └── Sensor_Magnetometro/                                # Testes do magnetômetro 3D TLV493D
+│       ├── test_tlv493d_i2c.ino                            # Firmware de streaming triaxial e baseline ΔB
+│       └── README.md                                       # Pinagem I2C e visualização no Serial Plotter
 ├── Domunetos e Artigos/                                    # Teses e artigos de apoio (PDFs pesados ignorados no Git)
 ├── .gitignore                                              # Proteção contra binários pesados e temporários
 ├── LICENSE                                                 # Licença MIT

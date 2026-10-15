@@ -21,3 +21,6 @@ env/
 build/
 .pio/
 .vscode/
+
+# Alias local do Windows (Junction)
+scr/
