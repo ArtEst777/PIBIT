@@ -1,5 +1,7 @@
 # PROJETO PIBIT — Miniaturização e Integração de Sensores Táteis Magnéticos eFlesh Aplicados a uma Luva
 
+> **Título provisório**: o nome definitivo do projeto ainda será escolhido.
+
 - **Autor**: Artur Ferreira Gonçalves (graduando em Engenharia Mecatrônica, UnB)
 - **Laboratório**: L-VIS — Laboratório de Visualização, Interação e Simulação (UnB)
 - **Período**: 12 meses
@@ -60,7 +62,7 @@ Para permitir uma implementação futura em RV:
 - Curvas de caracterização e métricas de erro (RMSE) para diferentes rigidezes.
 - Luva com três pontos de tato magnético e feedback vibrotátil em malha fechada local, inédita no Brasil.
 - Firmware modular pronto para integração futura com RV.
-- Repositório público (modelos CAD, firmware, scripts de ML) e submissão de resumo ao SBR 2026.
+- Repositório público (modelos CAD, firmware, scripts de ML) e submissão de resumo a um evento científico (a definir).
 
 ## 7. Discrepâncias em relação ao plano original
 
@@ -78,7 +80,7 @@ Durante a pré-prototipagem (Mês 1–2), foram identificadas discrepâncias té
 | Modelagem CAD | Cut-cell (Tozoni et al.) | Cut-cell personalizada no Fusion 360 | A treliça de octeto padrão é rígida e isotrópica; a célula personalizada (4 placas + cortes) permite deformação controlada |
 | Calibração | Regressão polinomial | MLP (2 camadas, 128 neurônios) + regressão como alternativa | Não linearidades do campo (1/d³), acoplamento entre eixos e deriva térmica exigem MLP |
 | **Plataforma de feedback** | **Integração com Unity / RV** | **Feedback no mundo real, malha local no ESP32** | **Tempo e recursos limitados; integração com RV (Unity/ROS2) preservada como etapa futura** |
-| Orçamento | R$ 855 (3 dedos) | R$ 197 (1 dedo) → R$ 264 (com bateria) | Abordagem faseada: validar 1 dedo antes de escalar para 3; itens gratuitos no L-VIS |
+| Orçamento | R$ 855 (3 dedos) | Placa universal: R$ 195 (1 dedo) → R$ 422 (3 dedos); PCB: R$ 338 (1 dedo) → R$ 472 (3 dedos), sem frete (ver `BOM/BOM.xlsx`) | Abordagem faseada: validar 1 dedo antes de escalar para 3; itens gratuitos no L-VIS |
 | Relatório | 100% submetido | 75% (14 correções pendentes) | Auditoria identificou erros de unidade (mT vs. Gauss) e omissões |
 | Posição do sensor | Não especificada | Lateral da falange distal | A face de contato deve ficar livre para o eFlesh; o breakout fica na lateral |
 
@@ -101,7 +103,10 @@ Essa limitação não inviabiliza o projeto; apenas reorganiza a sequência de e
 3. **Atuação háptica**: motor ERM 8×4 mm, 3 V (HU Infinito, R$ 5), no dorso do dedo ou na palma (15–30 mm do sensor). Validação experimental prevista para o Mês 6.
 4. **Processamento**: ESP32 DevKit V1 (Fase 1, bancada, R$ 43) e ESP32-S3 Nano (Fase 2, luva final). Ambos com I2C e PWM; Wi-Fi/BLE reservados para integração futura com RV.
 5. **Modelagem CAD**: cut-cell personalizada no Fusion 360 (célula de 6 mm, placas de 0,3 mm, cortes circulares de 2 mm). Guia passo a passo documentado.
-6. **BOM e custos**: R$ 197 (1 dedo) → R$ 264 (com bateria LiPo e case). Filamento TPU, resistores, protoboard e cabos USB disponíveis gratuitamente no L-VIS.
+6. **BOM e custos** (sem frete; detalhes em `BOM/BOM.xlsx`):
+   - Placa universal (montagem manual): R$ 195 (1 dedo, bancada) → R$ 422 (3 dedos, com bateria).
+   - PCB customizada: R$ 338 (1 dedo) → R$ 472 (3 dedos, com bateria).
+   - Parte dos valores ainda é estimada e precisa de cotação. Filamento TPU, resistores, protoboard e cabos USB disponíveis gratuitamente no L-VIS.
 7. **Documentação**: relatório técnico 75% pronto, com 14 correções identificadas em 4 níveis de dificuldade. Correções críticas: unidades (mT vs. Gauss), calibração (MLP vs. regressão), endereços I2C e interferência do ERM.
 8. **Base teórica**: eletromagnetismo estudado (8 módulos): campo magnético (B em mT), queda com 1/d³, efeito Hall, conversão LSB→mT, baseline (ΔB), cadeia força→deslocamento→campo, interferência do ERM, Lei de Faraday.
 9. **Próximos passos**:

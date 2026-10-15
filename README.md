@@ -1,5 +1,7 @@
 # 🧤 PIBIT — Miniaturização e Integração de Sensores Táteis Magnéticos eFlesh em uma Luva
 
+> *Título provisório — o nome definitivo ainda será escolhido.*
+>
 > **Programa**: PIBIT (Iniciação em Desenvolvimento Tecnológico e Inovação)
 > **Laboratório**: L-VIS — Laboratório de Visualização, Interação e Simulação (UnB)
 > **Autor**: Artur Ferreira Gonçalves — Engenharia Mecatrônica, UnB ([@ArtEst777](https://github.com/ArtEst777))
@@ -82,11 +84,23 @@ A análise completa está em [`docs/PROJETO_PIBIT.md`](docs/PROJETO_PIBIT.md).
 
 ---
 
+## 💰 Custos por cenário (sem frete)
+
+| Cenário | 1 dedo (início) | 3 dedos (objetivo final) |
+| :--- | ---: | ---: |
+| Placa universal (montagem manual, breakouts) | R$ 195 | R$ 422 |
+| PCB customizada (TLV493D SMD, KiCad) | R$ 338 | R$ 472 |
+
+Parte dos preços ainda é estimada (linhas amarelas na planilha). Detalhes em [`BOM/BOM.xlsx`](BOM/BOM.xlsx); para regenerar a planilha: `py BOM/gerar_bom.py BOM/BOM.xlsx`.
+
+---
+
 ## 📦 Estrutura do repositório
 
 ```text
 ├── BOM/
-│   └── BOM.xlsx            # Lista de materiais e custos
+│   ├── BOM.xlsx            # Lista de materiais: 4 cenários (universal/PCB × 1/3 dedos)
+│   └── gerar_bom.py        # Script que gera a planilha
 ├── Datasheet/              # Datasheets (PDFs não versionados)
 ├── Domunetos e Artigos/    # Referências (PDFs não versionados)
 ├── docs/
