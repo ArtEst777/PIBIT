@@ -11,7 +11,7 @@
 > **Instituição**: Universidade de Brasília (UnB)  
 > **Autor**: Artur Ferreira Gonçalves — Engenharia Mecatrônica, UnB ([@ArtEst777](https://github.com/ArtEst777))  
 > **Orientador**: Prof. Dr. Felix  
-> **Período**: 12 meses (início: Outubro/2026)  
+> **Período**: 12 meses (início: Julho/2026)  
 > **Fase atual**: Pré-prototipagem (Mês 1–2)  
 
 ---
