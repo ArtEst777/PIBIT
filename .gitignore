@@ -1,4 +1,4 @@
-# Arquivos grandes e referências externas em PDF
+# Binários grandes e artigos/livros externos em PDF
 *.pdf
 **/*.pdf
 
@@ -6,7 +6,17 @@
 ~$*
 .~lock.*
 
-# Sistema Operacional
+# Sistema Operacional e Logs
 Thumbs.db
 Desktop.ini
 .DS_Store
+*.log
+
+# Compilação e Ambientes Python/C++
+__pycache__/
+*.pyc
+.venv/
+env/
+build/
+.pio/
+.vscode/
