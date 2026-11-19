@@ -87,16 +87,19 @@ Tarefas de validação: **aperto controlado**, **detecção de deslizamento** e 
 
 ---
 
-## 💰 Custos por Cenário ([BOM/BOM.xlsx](BOM/BOM.xlsx))
+## 💰 Custos por Cenário ([BOM/BOM.xlsx](BOM/BOM.xlsx)) — Atualização v4.0 (Brasília - DF)
 
-A lista de materiais foi detalhada em 4 cenários com fórmulas automáticas por pacote (sem frete):
+A lista de materiais foi atualizada para a **versão 4.0**, calibrada com fornecedores nacionais (RoboCore, Eletrogate, HU Infinito, 3D Fila e Mercado Livre Full) e internacionais (DigiKey, AliExpress), considerando prazos e fretes otimizados para **Brasília - DF**:
 
-| Cenário | 1 Dedo (Bancada Inicial) | 3 Dedos (Luva Completa) |
-| :--- | :---: | :---: |
-| **Placa Universal** (Montagem Manual com Breakouts) | **R$ 195,07** | **R$ 421,73** |
-| **PCB Customizada** (Placa Própria KiCad com TLV493D SMD) | **R$ 338,14** | **R$ 472,08** |
+| Cenário / Arquitetura | 1 Dedo (Bancada Inicial) | 3 Dedos (Luva Completa) | Destaque Logístico (Brasília - DF) |
+| :--- | :---: | :---: | :--- |
+| **Placa Universal / Breakouts (Opção B)** | **R$ 255,24** | **R$ 437,22** | Breakouts Qwiic (AliExpress), Perfboard (Eletrogate/DF 2-3d), ESP32 DevKit V1 (RoboCore 2-3d) |
+| **PCB Customizada SMD (Opção A)** | **R$ 346,81** | **R$ 450,47** | CIs TLV493D-A1B6 (DigiKey), ESP32-WROOM-32U SMD (RoboCore), PCB lote JLCPCB, N52 Full (24-48h) |
 
-*Valores detalhados na planilha [`BOM/BOM.xlsx`](BOM/BOM.xlsx). Para recalcular a planilha com novos preços: `py BOM/gerar_bom.py BOM/BOM.xlsx`.*
+*Planilhas orçamentárias disponíveis no repositório:*
+- [`BOM/BOM.xlsx`](BOM/BOM.xlsx): Planilha executiva oficial com 4 cenários dinâmicos, cards de KPI, rateio por subsistema e caderno de notas técnicas.
+- [`BOM/pesquisa-precos-eflesh-lvis-v4.xlsx`](BOM/pesquisa-precos-eflesh-lvis-v4.xlsx): Planilha de pesquisa de preços v4.0 com comparativo Opção A vs Opção B e links ativos para Brasília - DF.
+- Para recalcular a planilha com novas taxas de câmbio ou preços: `py BOM/gerar_bom.py BOM/BOM.xlsx`.
 
 ---
 
@@ -104,7 +107,8 @@ A lista de materiais foi detalhada em 4 cenários com fórmulas automáticas por
 
 ```text
 ├── BOM/
-│   ├── BOM.xlsx                                            # Planilha orçamentária executiva (4 cenários e fórmulas)
+│   ├── BOM.xlsx                                            # Planilha orçamentária executiva (4 cenários, KPIs e fórmulas)
+│   ├── pesquisa-precos-eflesh-lvis-v4.xlsx                 # Pesquisa de preços v4.0 com links e logística Brasília - DF
 │   └── gerar_bom.py                                        # Script gerador da planilha BOM com validação automática
 ├── Datasheet/
 │   └── infineon-tlv493d-a1b6-datasheet-en.pdf              # Datasheet do sensor magnético 3D TLV493D
