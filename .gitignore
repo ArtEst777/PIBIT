@@ -1,7 +1,12 @@
 # Binários grandes e artigos/livros externos em PDF
 *.pdf
 **/*.pdf
+*.PDF
+**/*.PDF
 !docs/*.pdf
+!docs/*.PDF
+!Datasheet/*.pdf
+!Datasheet/*.PDF
 
 # Arquivos temporários do Office / Excel
 ~$*

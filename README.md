@@ -111,7 +111,10 @@ A lista de materiais foi atualizada para a **versão 4.0**, calibrada com fornec
 │   ├── pesquisa-precos-eflesh-lvis-v4.xlsx                 # Pesquisa de preços v4.0 com links e logística Brasília - DF
 │   └── gerar_bom.py                                        # Script gerador da planilha BOM com validação automática
 ├── Datasheet/
-│   └── infineon-tlv493d-a1b6-datasheet-en.pdf              # Datasheet do sensor magnético 3D TLV493D
+│   ├── infineon-tlv493d-a1b6-datasheet-en.pdf              # Datasheet do magnetômetro 3D Infineon TLV493D-A1B6
+│   ├── Vybronics-VC0834B010F-datasheet.pdf                 # Datasheet do motor vibrotátil ERM moeda 8×3.4 mm (VC0834B010F)
+│   ├── NDS7002A-D.PDF                                      # Datasheet do MOSFET canal N SMD NDS7002A (SOT-23 / driver ERM)
+│   └── 1N4148.PDF                                          # Datasheet do diodo rápido 1N4148 (proteção flyback do motor)
 ├── docs/
 │   ├── PROJETO_PIBIT.md                                    # Proposta técnica e registro detalhado de decisões
 │   ├── Catalogo_Fontes_PIBIT.xlsx                          # Catálogo com 99 fontes bibliográficas categorizadas
